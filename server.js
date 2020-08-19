@@ -37,6 +37,9 @@ app.use('/fruits', fruitsController);
 app.use('/vegetables', vegetablesController);
 app.use('/grains', grainsController);
 
+app.get('/',(req, res)=> {
+    res.redirect('/Index.html')
+})
 
 // listen
 app.listen(PORT, () => {
