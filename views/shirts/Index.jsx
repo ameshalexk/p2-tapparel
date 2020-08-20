@@ -9,13 +9,12 @@ class Index extends React.Component {
       <Layout>
         <Navbar></Navbar>
         <div className='bimg'>
-        <h1>Index Page</h1>
             <ul id="container">  
             <h1 className='h1f' style={{textAlign: 'center', color: 'black'}}> Choose your shirt designed by our experts : </h1>
                        {shirts.map((ele,idx)=> {
                          return (<ul key={ele._id} className='ulc'> 
                              <li className="pk" key={ele._id}>  
-                             <a class="btn btn-primary btn-lg" href={`/shirts/${ele._id}`}>
+                             <a className="btn btn-primary btn-lg" href={`/shirts/${ele._id}`}>
                              <img className="shadow-lg p-3 mb-5 bg-white rounded rounded-top imgs " src={ele.img} alt="asd"/>
                                </a>
                                 <br/>

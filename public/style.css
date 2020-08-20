@@ -32,7 +32,8 @@ span {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background-color: #E27D60;
+    /* background-color: #E27D60; */
+    background: linear-gradient(to right, cornflowerblue, #bada55)
     
 }
 
@@ -73,7 +74,8 @@ span {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;  */
-    background-color: #E27D60;
+    /* background-color: #E27D60; */
+    background: linear-gradient(to right, cornflowerblue, #bada55);
     margin: 3rem;
     border-radius: 25px;
     box-shadow: 10px 10px 10px rgb(78, 71, 71);
@@ -152,8 +154,8 @@ h2 {
 
 }
 h1 {
-    /* text-align: center; */
-    /* font-family: 'lol'; */
+    text-align: center;
+    font-family: 'lol';
     /* font-size: 25px; */
     margin: 3rem;
 
