@@ -6,8 +6,6 @@ const methodOverride = require('method-override');
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
-
-
 // middleware
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
@@ -27,15 +25,13 @@ mongoose.connection.once('open', () => {
 })
 
 // Controller
-const fruitsController = require('./controllers/fruits.js');
+const shirtsController = require('./controllers/shirts.js');
 
-const vegetablesController = require('./controllers/vegetables.js');
+app.get('/static/about', (req, res)=>{
+    res.render('static/About')
+  })
 
-const grainsController = require('./controllers/grains.js')
-
-app.use('/fruits', fruitsController);
-app.use('/vegetables', vegetablesController);
-app.use('/grains', grainsController);
+app.use('/shirts', shirtsController);
 
 app.get('/',(req, res)=> {
     res.redirect('/Index.html')
