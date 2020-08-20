@@ -22,17 +22,17 @@ router.get('/',isAuthenticated, (req, res) => {
 });
 
 // New
-router.get('/new', (req, res) => {
+router.get('/new',isAuthenticated, (req, res) => {
     res.render('shirts/New');
 });
 
 //CUSTOM
 router.get('/custom', (req, res) => {
-    res.render('shirts/Custom');
+    res.send('Custom Page - Work in progress');
 })
 
 // Delete
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated,(req, res) => {
     Shirt.findByIdAndRemove(req.params.id, (error, shirt) => {
         res.redirect('/shirts');
     });
@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
 });
 
 // Edit 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isAuthenticated, (req, res) => {
     Shirt.findById(req.params.id, (err, foundShirt) => {
         res.render('shirts/Edit', {
             shirt: foundShirt
@@ -63,7 +63,7 @@ router.get('/:id/edit', (req, res) => {
 });
 
 // Patch
-router.patch('/:id', (req, res)=>{
+router.patch('/:id',isAuthenticated, (req, res)=>{
     req.body.qty -= req.body.qtys
     Shirt.findByIdAndUpdate(req.params.id, req.body, (error, updatedItem) => {
         res.redirect("/shirts/")
@@ -73,7 +73,7 @@ router.patch('/:id', (req, res)=>{
 });
 
 // Show
-router.get('/:id', (req, res) => {
+router.get('/:id', isAuthenticated,(req, res) => {
     Shirt.findById(req.params.id, (error, foundShirt) => {
         res.render('shirts/Show', {
             shirt: foundShirt
