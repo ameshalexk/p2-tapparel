@@ -54,6 +54,11 @@ app.get('/users/index', (req, res)=>{
 
 // }
 // })
+
+app.get('/sessions/new', (req, res) => {
+  res.render('sessions/New', { currentUser: req.session.currentUser });
+});
+
 // Controller
 const shirtsController = require('./controllers/shirts.js');
 const userController = require('./controllers/users_controller.js')
