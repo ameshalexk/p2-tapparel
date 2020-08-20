@@ -18,6 +18,11 @@ router.get('/new', (req, res) => {
     res.render('shirts/New');
 });
 
+//CUSTOM
+router.get('/custom', (req, res) => {
+    res.render('shirts/Custom');
+})
+
 // Delete
 router.delete('/:id', (req, res) => {
     Shirt.findByIdAndRemove(req.params.id, (error, shirt) => {
