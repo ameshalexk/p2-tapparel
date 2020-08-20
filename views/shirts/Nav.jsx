@@ -33,6 +33,11 @@ class Navbar extends React.Component {
             <span className="navbar-text">
               Custom T's or Designer T's - You Choose Your Own Style
     </span>
+    <li>
+    <form action="/sessions?_method=DELETE" method="POST">
+      <input type="submit" value="Log Out" className="btn-small red" />
+    </form>
+  </li>
           </div>
         </nav>
       </div>

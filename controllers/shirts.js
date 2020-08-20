@@ -1,13 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const Shirt = require('../models/shirts.js');
-
+const isAuthenticated = (req, res, next) => {
+    if (req.session.currentUser) {
+      return next()
+    } else {
+      res.redirect('/sessions/new')
+    }
+  }
 // add routes
 // Index
-router.get('/', (req, res) => {
+router.get('/',isAuthenticated, (req, res) => {
+    console.log(req.session.currentUser);
     Shirt.find({}, (error, allShirts) => {
         res.render('shirts/Index', {
-            shirts: allShirts
+            shirts: allShirts,
+            currentUser: req.session.currentUser
         })
     });
 
