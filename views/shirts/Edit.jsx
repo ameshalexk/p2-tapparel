@@ -34,6 +34,11 @@ class Edit extends React.Component {
                 </div>
                 <input type="submit" name="" defaultValue="Edit Shirt"/>
         </form>
+        <div>
+          <form action={`/shirts/${shirt._id}?_method=DELETE`} method="POST">
+            <button className="btn btn-primary" value="Delete">DELETE ITEM</button>
+          </form>
+        </div>
         </div>
         </Layout>
     )
