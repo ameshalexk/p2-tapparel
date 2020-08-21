@@ -59,6 +59,18 @@ app.get('/sessions/new', (req, res) => {
   res.render('sessions/New', { currentUser: req.session.currentUser });
 });
 
+
+// app.get('/shirts', (req, res)=>{
+// if(req.session.currentUser){
+//   res.render('index.ejs')
+// } else {
+//   res.status(401).json({
+//       status: 401,
+//       message: 'not logged in'
+//   });
+
+// }
+// })
 // Controller
 const shirtsController = require('./controllers/shirts.js');
 const userController = require('./controllers/users_controller.js')
