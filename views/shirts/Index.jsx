@@ -6,8 +6,9 @@ class Index extends React.Component {
   render() {
       const shirts = this.props.shirts;
     return (
-      <Layout>
+      <Layout title='Home Page'>
         <Navbar></Navbar>
+    <h1>Welcome : {this.props.currentUser}</h1>
         <div className='bimg'>
             <ul id="container">  
             <h1 className='h1f' style={{textAlign: 'center', color: 'black'}}> Choose your shirt designed by our experts : </h1>
@@ -24,7 +25,6 @@ class Index extends React.Component {
                        })}
                        </ul>
             <nav>
-          {/* <a href="/items/new">Create a New Item</a> */}
             </nav>
         </div>
       </Layout>
