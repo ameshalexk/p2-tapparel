@@ -27,9 +27,9 @@ router.get('/new',isAuthenticated, (req, res) => {
 });
 
 //CUSTOM
-router.get('/custom', (req, res) => {
-    res.send('Custom Page - Work in progress');
-})
+// router.get('/custom', (req, res) => {
+//     res.send('Custom Page - Work in progress');
+// })
 
 // Delete
 router.delete('/:id', isAuthenticated,(req, res) => {

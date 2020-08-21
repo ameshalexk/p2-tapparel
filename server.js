@@ -75,12 +75,14 @@ app.get('/sessions/new', (req, res) => {
 const shirtsController = require('./controllers/shirts.js');
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
+const customController = require('./controllers/custom.js')
 
 
 
 app.use('/shirts', shirtsController);
 app.use('/users', userController)
 app.use('/sessions', sessionsController)
+app.use('/custom', customController)
 
 
 app.get('/',(req, res)=> {

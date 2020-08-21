@@ -12,6 +12,52 @@
     url('./font/Bangers-Regular.ttf') format('truetype');
 }
 
+.customcontainer {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+
+}
+.shirtcontainer {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "overlap";
+    grid-column: 2;
+    grid-row: 2;
+}
+.textcontainer {
+    /* display:grid;
+    grid-template-columns: 1fr; */
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center; 
+}
+
+.shirt {
+    width: 450px;
+    height: 450px;
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center; 
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center;  
+}
+
+.maincontainer {
+     grid-column: 1;
+     grid-row: 2;
+     align-self: center;
+    justify-self: center;
+    
+}
+
 body {
     background-color: #41B3A3; 
 }
@@ -154,13 +200,17 @@ h2 {
     font-size: 30px; */
 
 }
+.shirth1 {
+    margin: 3em;
+}
 h1 {
     text-align: center;
     font-family: 'lol';
     /* font-size: 25px; */
-    margin: 3rem;
 
 }
+
+
 h3 {
     /* text-align: center; */
     /* font-family: 'lol';
@@ -325,12 +375,12 @@ input {
         
     }
     
-    .showpg {
+.customcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr  ;
 }
-.showpgdiv1 {
+.maincontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -339,13 +389,14 @@ input {
     grid-row: 1;
 
 }
-.showpgdiv2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.shirtcontainer {
+    display:grid;
+    grid-template-columns: 1fr;
+    /* grid-template-areas: "overlap"; */
     grid-column: 1 /span 2;
     grid-row: 2;
+    align-self: center;
+    justify-self: center; 
 
 }
 
