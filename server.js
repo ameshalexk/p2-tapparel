@@ -72,7 +72,7 @@ app.use('/sessions', sessionsController)
 
 
 app.get('/',(req, res)=> {
-    res.redirect('/Index.html')
+    res.redirect('/users/new')
 })
 
 // listen

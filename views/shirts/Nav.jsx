@@ -3,41 +3,32 @@ class Navbar extends React.Component {
   render() {
     return (
       <div >
-        {/* <nav>
-          <ul id="navul">
-            <li key='1' id="hp"><a href="/shirts/" class="btn btn-primary btn-lg" >Home Page </a> </li>
-            <li key='2' id="cp"><a href="/shirts/new" class="btn btn-primary btn-lg">Custom Order</a></li>
-            <li key='2' id="cp"><a href="/static/About" class="btn btn-primary btn-lg">About us </a></li>
-          </ul>
-        </nav> */}
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark navul" style={{background: "#e3f2fd"}}>
-          <a className="navbar-brand" href="/shirts">TAPPAREL.COM</a>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark navul sticky-top" style={{background: "#e3f2fd"}}>
+          <a className="navbar-brand" href="/shirts"> <img src="" alt=""/> TAPPAREL.COM</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="/shirts">Home <span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="/shirts">Home </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item active">
                 <a className="nav-link" href="/shirts/new">Admin Only</a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item active">
                 <a className="nav-link" href="/shirts/custom">Custom Order</a>
-              </li> */}
-              <li className="nav-item">
+              </li>
+              <li className="nav-item active">
                 <a className="nav-link" href="/static/about">About Us</a>
               </li>
-            </ul>
-            <span className="navbar-text">
+             </ul>
+              <span style={{textAlign: "center", background: 'linear-gradient(to right, cornflowerblue, #bada55)'}} className="nav-link" >
               Custom T's or Designer T's - You Choose Your Own Style
-    </span>
-    <li>
-    <form action="/sessions?_method=DELETE" method="POST">
-      <input type="submit" value="Log Out" className="btn-small red" />
-    </form>
-  </li>
+              </span>
+            <form style={{textAlign: "center"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form>
           </div>
         </nav>
       </div>
