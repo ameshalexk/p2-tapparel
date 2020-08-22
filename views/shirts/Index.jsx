@@ -9,6 +9,9 @@ class Index extends React.Component {
     return (
       <Layout title='Home Page'>
         <Navbar></Navbar>
+        <form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form>
     <h1 className='shirth1'>Welcome : {this.props.currentUser}</h1>
         <div className='bimg'>
             <ul id="container">  

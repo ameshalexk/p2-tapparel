@@ -26,9 +26,7 @@ class Navbar extends React.Component {
               <span style={{textAlign: "center", background: 'linear-gradient(to right, cornflowerblue, #bada55)'}} className="nav-link" >
               Custom T's or Designer T's - You Choose Your Own Style
               </span>
-            <form style={{textAlign: "center"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
-            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
-            </form>
+            
           </div>
         </nav>
       </div>
