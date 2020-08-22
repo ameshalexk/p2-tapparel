@@ -4,7 +4,8 @@ const Navbar = require('./Nav')
 
 class Show extends React.Component {
     render() {
-        const shirt = this.props.shirt;
+        const shirt = this.props.shirty;
+        console.log(this.props, true);
         const check = () => {
             if (shirt.qty > 0) {
                 return (
@@ -36,7 +37,8 @@ class Show extends React.Component {
             <div className="showpg">
                 <div className="showpgdiv1">
                                 <h1>Item Page</h1> <br/>
-                                <h2>Name : {shirt.name}</h2><br/>
+                                <h2>Name : {shirt.name}</h2><br/> 
+
                                 <h3>Description : {shirt.description}</h3><br/>
                                 <h4>Price : {shirt.price}</h4><br/>
                                 <h4>Qty : {shirt.qty}</h4><br/>

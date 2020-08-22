@@ -11,10 +11,10 @@ const isAuthenticated = (req, res, next) => {
 // add routes
 // Index
 router.get('/',isAuthenticated, (req, res) => {
-    console.log(req.session.currentUser);
+    // console.log(req.session.currentUser);
     Shirt.find({}, (error, allShirts) => {
         res.render('shirts/Index', {
-            shirts: allShirts,
+            shirtsyy: allShirts,
             currentUser: req.session.currentUser
         })
     });
@@ -55,9 +55,9 @@ router.post('/', (req, res) => {
 
 // Edit 
 router.get('/:id/edit', isAuthenticated, (req, res) => {
-    Shirt.findById(req.params.id, (err, foundShirt) => {
+    Shirt.findById(req.params.id, (err, foundShirts) => {
         res.render('shirts/Edit', {
-            shirt: foundShirt
+            shirt: foundShirts
         })
     });
 });
@@ -76,7 +76,7 @@ router.patch('/:id',isAuthenticated, (req, res)=>{
 router.get('/:id', isAuthenticated,(req, res) => {
     Shirt.findById(req.params.id, (error, foundShirt) => {
         res.render('shirts/Show', {
-            shirt: foundShirt
+            shirty: foundShirt
         });
     });
 });

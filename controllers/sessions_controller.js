@@ -36,7 +36,7 @@ sessions.post('/', (req, res) => {
         // add the user to our session
         req.session.currentUser = foundUser.username
         // redirect back to our home page
-        console.log('sdsdsds');
+        // console.log('sdsdsds');
         res.redirect('/shirts/')
       } else {
         // passwords do not match

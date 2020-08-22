@@ -4,7 +4,8 @@ const Navbar = require('./Nav')
 
 class Index extends React.Component {
   render() {
-      const shirts = this.props.shirts;
+      const shirts = this.props.shirtsyy;
+      // console.log(shirts);
     return (
       <Layout title='Home Page'>
         <Navbar></Navbar>

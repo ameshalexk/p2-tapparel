@@ -5,6 +5,9 @@ const Navbar = require('../shirts/Nav')
 class Show extends React.Component {
     render() {
         const logos = this.props.logos;
+        const test = this.props.bob;
+        const lol = Object.keys(this.props.ciurl).toString()
+        console.log(logos,'lool');
         return (
             <Layout> 
             <Navbar></Navbar>
@@ -16,7 +19,7 @@ class Show extends React.Component {
                         </div>
                     </div>
                     <div className="shirtcontainer">
-                        <img className="shirt" src='https://i.imgur.com/iHewPMj.jpg' alt="asd" />
+                        <img className="shirt" src={lol} alt="asd" />
                         <img className="logo" src={logos.img} alt="asd" />
                     </div> 
             </div>           

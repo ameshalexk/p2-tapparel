@@ -23,7 +23,7 @@ app.use(
   )
 const MONGOURI= process.env.MONGOURI;
 
-mongoose.connect(MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true , useFindAndModify: false
+mongoose.connect(MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true , useFindAndModify: false , useCreateIndex: true
 });
 
 // mongoose connection
@@ -36,11 +36,11 @@ app.get('/static/about', (req, res)=>{
   res.render('static/About')
 })
 
-app.get('/users/index', (req, res)=>{
-  res.render('index.ejs', {
-      currentUser: req.session.currentUser
-  });
-});
+// app.get('/users/index', (req, res)=>{
+//   res.render('index.ejs', {
+//       currentUser: req.session.currentUser
+//   });
+// });
 
 
 // app.get('/shirts', (req, res)=>{
@@ -76,6 +76,7 @@ const shirtsController = require('./controllers/shirts.js');
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
 const customController = require('./controllers/custom.js')
+const cshirtController = require('./controllers/cshirt.js')
 
 
 
@@ -83,6 +84,7 @@ app.use('/shirts', shirtsController);
 app.use('/users', userController)
 app.use('/sessions', sessionsController)
 app.use('/custom', customController)
+app.use('/cshirt', cshirtController)
 
 
 app.get('/',(req, res)=> {
