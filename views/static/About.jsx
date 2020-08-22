@@ -7,10 +7,10 @@ class About extends React.Component {
     return (
       <Layout>
         <Navbar></Navbar>
-      <h1>
+      <h1 className="bimgab">
         About Page
       </h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos autem sapiente nemo cupiditate dolore placeat praesentium, et hic! Mollitia, delectus nemo? Sunt quam quibusdam reiciendis nisi possimus recusandae. Soluta, nemo?
+      <p className="bimg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos autem sapiente nemo cupiditate dolore placeat praesentium, et hic! Mollitia, delectus nemo? Sunt quam quibusdam reiciendis nisi possimus recusandae. Soluta, nemo?
       Quod totam placeat ad dolores libero impedit nobis ipsa perferendis modi veniam, sunt sint aliquam, excepturi distinctio corporis architecto vero error dicta molestiae similique rem. Ducimus ipsa doloribus dolorum vero!
       Cum labore sunt, quidem laudantium praesentium quas velit vero. Culpa ullam optio accusantium reprehenderit vero facere voluptate pariatur adipisci esse nostrum aspernatur dignissimos, facilis eos minus alias in debitis repudiandae.
       Blanditiis odit, error sapiente impedit voluptates ullam nulla unde aut fugiat iusto. Amet porro voluptas cum debitis delectus odit illum vel quae possimus quo consequatur tempore, ea eius? Saepe, soluta.

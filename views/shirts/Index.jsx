@@ -13,7 +13,7 @@ class Index extends React.Component {
             <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
             </form>
     <h1 className='shirth1'>Welcome : {this.props.currentUser}</h1>
-        <div className='bimg'>
+        <div className='bim'>
             <ul id="container">  
             <h1 className='h1f' style={{textAlign: 'center', color: 'black'}}> Choose your shirt designed by our experts : </h1>
                        {shirts.map((ele,idx)=> {

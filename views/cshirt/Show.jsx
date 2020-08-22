@@ -11,14 +11,14 @@ class Show extends React.Component {
             <Navbar></Navbar>
             {console.log(this.props.logos),true}
 
-            <div className="customcontainer">
+            <div className="customcontainer bimgabc">
                 <div className="maincontainer">
                     <div className="textcontainer">
-                        <h1 id="ch1">Shirt Preview</h1> <br/>
-                        <h2>Name : {cshirt.name}</h2><br/>
+                        <h1 className="bimgab" id="ch1">Shirt Preview</h1> <br/>
+                        <h2 className="bimgab">Name : {cshirt.name}</h2><br/>
                         </div>
                     </div>
-                    <div className="shirtcontainer">
+                    <div className="shirtcontainer bimgab">
                         {/* <img className="shirt" src='https://i.imgur.com/iHewPMj.jpg' alt="asd" /> */}
                         <img className="logo" src={cshirt.img} alt="asd" />
                     </div> 

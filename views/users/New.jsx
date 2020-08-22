@@ -7,17 +7,17 @@ class NewUser extends React.Component {
         return (
             <Layout>
             <Navbar></Navbar>
-            <div style={{textAlign: 'center'}}>
+            <div className="register" >
                 <h1>New User</h1>
                 <form action="/users/" method="POST">
                     USER NAME: <input type="text" name="username" style={{margin: '10px'}}/>
                     <br />
-                    PASSWORD: <input type="password" name="password" style={{margin: '10px'}}/>
+                    PASSWORD: <input className="qtys" type="password" name="password" style={{margin: '10px'}}/>
                     <br />
-                    <input type="submit" value="Create User" />
+                    <input className="qtys" type="submit" value="Create User" />
                 </form>
                 <br/>
-                <a style={{border: '1px solid black', color: 'darkmagenta'}}href="/sessions/new"> EXISTING USER?</a>
+                <a className="qtys" style={{border: '1px solid black', color: 'darkmagenta'}}href="/sessions/new"> EXISTING USER?</a>
             </div>
             </Layout>
         );

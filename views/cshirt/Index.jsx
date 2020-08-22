@@ -10,9 +10,9 @@ class Index extends React.Component {
         <Navbar></Navbar>
     <h1>Welcome : {this.props.currentUser}</h1> 
     {/* {console.log(this.props.cshirt,this.props,true)} */}
-        <div className='bimg'>
+        <div className='bim'>
           <div>
-            <a href="/cshirt/new" style={{color: 'red',border: '2px solid'}}> Upload your own Custom Shirt Image</a>
+            <a className="bimgab" href="/cshirt/new" style={{color: 'yellow',border: '2px solid'}}> Upload your own Custom Shirt Image</a>
           </div>
             <ul id="container">  
             <h1 className='h1f' style={{textAlign: 'center', color: 'black'}}> Choose your custom shirt designed by our experts : </h1>

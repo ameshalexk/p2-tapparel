@@ -11,7 +11,7 @@ class Show extends React.Component {
         return (
             <Layout> 
             <Navbar></Navbar>
-            <div className="customcontainer">
+            <div className="customcontainer bimgab">
                 <div className="maincontainer">
                     <div className="textcontainer">
                         <h1 id="ch1">Shirt Preview</h1> <br/>

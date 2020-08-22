@@ -9,10 +9,10 @@ class Show extends React.Component {
         const check = () => {
             if (shirt.qty > 0) {
                 return (
-                    <div className='bimg'>
+                    <div className='fbim'>
                         <form action={`/shirts/${shirt.id}?_method=PATCH`} id="form1" method="POST">
                             <label htmlFor="qtys">Choose Quantity (Max 5):</label>
-                            <select name="qtys" id="qtys">
+                            <select className="qtys" name="qtys" id="qtys">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -21,7 +21,7 @@ class Show extends React.Component {
                             </select>
                             <br/>
                             <br/>
-                                <button className="btn btn-primary" type="submit" form="form1" name="qty" value={shirt.qty}> Buy </button><br />
+                                <button className="btn btn-primary bc" type="submit" form="form1" name="qty" value={shirt.qty}> Buy </button><br />
                 </form>
                 </div>
 
@@ -35,7 +35,7 @@ class Show extends React.Component {
             <Layout> 
             <Navbar></Navbar>
             <div className="showpg">
-                <div className="showpgdiv1">
+                <div className="showpgdiv1 bimgab">
                                 <h1>Item Page</h1> <br/>
                                 <h2>Name : {shirt.name}</h2><br/> 
 
@@ -43,7 +43,7 @@ class Show extends React.Component {
                                 <h4>Price : {shirt.price}</h4><br/>
                                 <h4>Qty : {shirt.qty}</h4><br/>
                                 </div>
-                                <div className="showpgdiv2">
+                                <div className="showpgdiv2 bimgab">
                                 <img className="showimgf" src={shirt.img} alt="asd" />
                                 <div className="checked">
                                     {check()}
