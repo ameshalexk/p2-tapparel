@@ -9,7 +9,7 @@ class Edit extends React.Component {
         <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
             <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
             </form></Navbar>
-        <div>
+        <div className="editshirt">
         <h1>Edit page</h1>
         <form action={`/shirts/${shirt._id}?_method=PUT`} method="POST">
         <div className="form-row">
@@ -34,11 +34,11 @@ class Edit extends React.Component {
                 <input className="form-control" type="number" name="qty" defaultValue={shirt.qty}/><br/>
                 </div>
                 </div>
-                <input className="qtys" type="submit" name="" defaultValue="Edit Shirt"/>
+                <input className=" btn btn-primary" type="submit" name="" defaultValue="Edit Shirt"/>
         </form>
         <div>
           <form action={`/shirts/${shirt._id}?_method=DELETE`} method="POST">
-            <button className="btn btn-primary" value="Delete">DELETE ITEM</button>
+            <button style={{margin: '10px'}} className="btn btn-danger" value="Delete">DELETE ITEM</button>
           </form>
         </div>
         </div>
