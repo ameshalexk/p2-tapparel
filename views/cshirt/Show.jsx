@@ -8,7 +8,9 @@ class Show extends React.Component {
         const logos = this.props.logos;
         return (
             <Layout> 
-            <Navbar></Navbar>
+            <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form></Navbar>
 
 
 

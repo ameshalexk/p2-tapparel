@@ -1,4 +1,6 @@
 const React = require('react');
+const Layout = require('../components/Layout.jsx')
+
 class Navbar extends React.Component {
   render() {
     return (
@@ -26,7 +28,7 @@ class Navbar extends React.Component {
               <span style={{textAlign: "center", background: 'linear-gradient(to right, cornflowerblue, #bada55)'}} className="nav-link" >
               Custom T's or Designer T's - You Choose Your Own Style
               </span>
-            
+              {this.props.children}
           </div>
         </nav>
       </div>

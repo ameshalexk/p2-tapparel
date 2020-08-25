@@ -6,7 +6,9 @@ class About extends React.Component {
   render(){
     return (
       <Layout>
-        <Navbar></Navbar>
+        <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form></Navbar>
       <h1 className="bimgab">
         About Page
       </h1>

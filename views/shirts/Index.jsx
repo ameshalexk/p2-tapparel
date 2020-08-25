@@ -7,10 +7,12 @@ class Index extends React.Component {
       const shirts = this.props.shirtsyy;
     return (
       <Layout title='Home Page'>
-        <Navbar></Navbar>
+        <Navbar>
         <form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
             <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
             </form>
+        </Navbar>
+        
     <h1 className='shirth1'>Welcome : {this.props.currentUser}</h1>
         <div className='bim'>
             <ul id="container">  

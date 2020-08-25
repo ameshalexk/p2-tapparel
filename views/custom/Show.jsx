@@ -8,7 +8,9 @@ class Show extends React.Component {
         const lol = Object.keys(this.props.ciurl).toString()
         return (
             <Layout> 
-            <Navbar></Navbar>
+            <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form></Navbar>
             <div className="customcontainer bimgab2">
                 <div className="maincontainer">
                     <div className="textcontainer">

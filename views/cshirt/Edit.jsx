@@ -6,7 +6,9 @@ class Edit extends React.Component {
     const shirt = this.props.cshirt;
     return (
       <Layout>
-        <Navbar></Navbar>
+        <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form></Navbar>
         <div>
         <h1>Edit page</h1>
         <form action={`/shirts/${shirt.id}?_method=PUT`} method="POST">

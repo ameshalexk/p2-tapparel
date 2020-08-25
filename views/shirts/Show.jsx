@@ -32,7 +32,9 @@ class Show extends React.Component {
         }
         return (
             <Layout> 
-            <Navbar></Navbar>
+            <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form></Navbar>
             <div className="showpg">
                 <div className="showpgdiv1 bimgab">
                                 <h1>Item Page</h1> <br/>

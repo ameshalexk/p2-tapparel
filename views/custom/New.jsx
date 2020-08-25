@@ -6,7 +6,9 @@ class New extends React.Component {
   render() {
     return (
       <Layout>
-        <Navbar></Navbar>
+        <Navbar><form style={{textAlign: "right"}} className="nav-link" action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Log Out" className="btn-small red btn btn-primary " />
+            </form></Navbar>
         <div className='bimg'>
             <h1>Create New Logo</h1>
             <form action="/custom" method="POST">
