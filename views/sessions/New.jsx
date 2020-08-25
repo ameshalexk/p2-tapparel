@@ -9,8 +9,8 @@ class LoginUser extends React.Component {
             <Navbar></Navbar>
             <div className="login" style={{textAlign: 'center'}}>
                 <h1>Login</h1>
-                <form action="/sessions/" method="POST">
-                    USER NAME: <input type="text" name="username" style={{margin: '10px'}}/>
+                <form action="/sessions" method="POST">
+                    USER NAME: <input className="qtys" type="text" name="username" style={{margin: '10px'}}/>
                     <br />
                     PASSWORD: <input className="qtys" type="password" name="password" style={{margin: '10px'}}/>
                     <br />

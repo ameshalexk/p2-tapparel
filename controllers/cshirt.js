@@ -13,7 +13,6 @@ const isAuthenticated = (req, res, next) => {
 
 //Index
 cshirt.get('/',isAuthenticated, (req, res) => {
-    // console.log(req.session.currentUser);
     Cshirt.find({}, (error, allcshirt) => {
         res.render('cshirt/Index', {
             cshirt: allcshirt,
@@ -26,7 +25,6 @@ cshirt.get('/',isAuthenticated, (req, res) => {
 
 // New
 cshirt.get('/new',isAuthenticated, (req, res) => {
-    // console.log('sdsd');
     res.render('cshirt/New');
 });
 
@@ -47,7 +45,6 @@ cshirt.put('/:id', (req, res) => {
 // Create
 cshirt.post('/', (req, res) => {
     Cshirt.create(req.body, (error, createdcshirt) => {
-        // Once created - respond to client
         res.redirect('/cshirt');
     });
 });

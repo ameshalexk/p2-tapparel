@@ -5,7 +5,6 @@ const Navbar = require('./Nav')
 class Show extends React.Component {
     render() {
         const shirt = this.props.shirty;
-        console.log(this.props, true);
         const check = () => {
             if (shirt.qty > 0) {
                 return (

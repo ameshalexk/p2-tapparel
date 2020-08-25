@@ -9,8 +9,8 @@ class NewUser extends React.Component {
             <Navbar></Navbar>
             <div className="register" >
                 <h1>New User</h1>
-                <form action="/users/" method="POST">
-                    USER NAME: <input type="text" name="username" style={{margin: '10px'}}/>
+                <form action="/users" method="POST">
+                    USER NAME: <input className="qtys" type="text" name="username" style={{margin: '10px'}}/>
                     <br />
                     PASSWORD: <input className="qtys" type="password" name="password" style={{margin: '10px'}}/>
                     <br />

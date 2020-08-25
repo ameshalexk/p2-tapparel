@@ -26,11 +26,6 @@ router.get('/new',isAuthenticated, (req, res) => {
     res.render('shirts/New');
 });
 
-//CUSTOM
-// router.get('/custom', (req, res) => {
-//     res.send('Custom Page - Work in progress');
-// })
-
 // Delete
 router.delete('/:id', isAuthenticated,(req, res) => {
     Shirt.findByIdAndRemove(req.params.id, (error, shirt) => {

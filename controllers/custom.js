@@ -11,7 +11,7 @@ const isAuthenticated = (req, res, next) => {
 
 //Index
 custom.get('/',isAuthenticated, (req, res) => {
-    // console.log(req.session.currentUser);
+
     Custom.find({}, (error, allLogos) => {
         res.render('custom/Index', {
             logos: allLogos,
@@ -44,7 +44,6 @@ custom.put('/:id', (req, res) => {
 // Create
 custom.post('/', (req, res) => {
     Custom.create(req.body, (error, createdCustom) => {
-        // Once created - respond to client
         res.redirect('/custom');
     });
 });
@@ -67,19 +66,8 @@ custom.patch('/:id',isAuthenticated, (req, res)=>{
     
 });
 
-// Show
-// custom.get('/:id', isAuthenticated,(req, res) => {
-//     Custom.findById(req.params.id,  (error, foundCustom) => {
-//         res.render('custom/Show', {
-//             logos: foundCustom,
-            
-//         });
-//     });
-// });
-
 custom.get('/:id', isAuthenticated,(req, res) => {
     Custom.findById(req.params.id, (error, foundCustom) => {
-        console.log(req.query, 'latest');
         res.render('custom/Show', {
             logos: foundCustom,
             ciurl: req.query,

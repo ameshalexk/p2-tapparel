@@ -32,45 +32,8 @@ mongoose.connection.once('open', () => {
     console.log("connected to mongo");
     
 })
-app.get('/static/about', (req, res)=>{
-  res.render('static/About')
-})
-
-// app.get('/users/index', (req, res)=>{
-//   res.render('index.ejs', {
-//       currentUser: req.session.currentUser
-//   });
-// });
 
 
-// app.get('/shirts', (req, res)=>{
-// if(req.session.currentUser){
-//   res.render('index.ejs')
-// } else {
-//   res.status(401).json({
-//       status: 401,
-//       message: 'not logged in'
-//   });
-
-// }
-// })
-
-app.get('/sessions/new', (req, res) => {
-  res.render('sessions/New', { currentUser: req.session.currentUser });
-});
-
-
-// app.get('/shirts', (req, res)=>{
-// if(req.session.currentUser){
-//   res.render('index.ejs')
-// } else {
-//   res.status(401).json({
-//       status: 401,
-//       message: 'not logged in'
-//   });
-
-// }
-// })
 // Controller
 const shirtsController = require('./controllers/shirts.js');
 const userController = require('./controllers/users_controller.js')
@@ -78,14 +41,19 @@ const sessionsController = require('./controllers/sessions_controller.js')
 const customController = require('./controllers/custom.js')
 const cshirtController = require('./controllers/cshirt.js')
 
-
-
 app.use('/shirts', shirtsController);
 app.use('/users', userController)
 app.use('/sessions', sessionsController)
 app.use('/custom', customController)
 app.use('/cshirt', cshirtController)
 
+app.get('/static/about', (req, res)=>{
+  res.render('static/About')
+})
+
+app.get('/sessions/new', (req, res) => {
+  res.render('sessions/New', { currentUser: req.session.currentUser });
+});
 
 app.get('/',(req, res)=> {
     res.redirect('/users/new')

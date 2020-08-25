@@ -9,7 +9,6 @@ class Index extends React.Component {
       <Layout title='Home Page'>
         <Navbar></Navbar>
     <h1>Welcome : {this.props.currentUser}</h1> 
-    {/* {console.log(this.props.cshirt,this.props,true)} */}
         <div className='bim'>
           <div>
             <a className="bimgab" href="/cshirt/new" style={{color: 'yellow',border: '2px solid'}}> Upload your own Custom Shirt Image</a>

@@ -32,7 +32,7 @@ class Edit extends React.Component {
                 <input className="form-control" type="number" name="qty" defaultValue={shirt.qty}/><br/>
                 </div>
                 </div>
-                <input type="submit" name="" defaultValue="Edit Shirt"/>
+                <input className="qtys" type="submit" name="" defaultValue="Edit Shirt"/>
         </form>
         <div>
           <form action={`/shirts/${shirt._id}?_method=DELETE`} method="POST">

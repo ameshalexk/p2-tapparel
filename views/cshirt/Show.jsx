@@ -9,7 +9,8 @@ class Show extends React.Component {
         return (
             <Layout> 
             <Navbar></Navbar>
-            {console.log(this.props.logos),true}
+
+
 
             <div className="customcontainer bimgabc">
                 <div className="maincontainer">
@@ -19,7 +20,6 @@ class Show extends React.Component {
                         </div>
                     </div>
                     <div className="shirtcontainer bimgab">
-                        {/* <img className="shirt" src='https://i.imgur.com/iHewPMj.jpg' alt="asd" /> */}
                         <img className="logo" src={cshirt.img} alt="asd" />
                     </div> 
             </div>         
